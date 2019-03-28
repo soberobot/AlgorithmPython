@@ -74,6 +74,15 @@ class Tree(object):
 
     traversal(self.root)
     return ret
+  
+  def in_order_traverse(self, root):
+    """另一种中序遍历"""
+
+    if not root:
+      return
+    self.in_order_traverse(root.left)
+    print(root.val)
+    self.in_order_traverse(root.right)
 
   def postorder(self):
     ret = []
